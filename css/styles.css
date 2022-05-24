@@ -1,0 +1,106 @@
+/* A5A4CF is curve color 
+salmon: F5A5A3
+
+
+
+header {
+    width: 600px;
+    margin: 40 auto;
+    background: lavenderblush;
+    text-align: left;
+}
+
+  html {
+    font-size: 18px; /* px means "pixels": the base font size is now 10 pixels high
+    font-family: 'Roboto Mono', monospace; /* this should be the rest of the output you got from Google fonts
+  }
+
+*/
+
+body {
+  background: #A5A4CF;
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-menu-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: silver;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Courier Prime', monospace;
+  vertical-align: middle;
+}
+
+.curve {
+  position: relative;
+  cursor: default;
+  margin: 2em auto;
+  width: 80%;
+  border: 6px double #fff;
+  border-color: #fff;
+  padding: 1em;
+  max-width: 640px;
+}
+
+.blue {
+  background: #3465a4;
+  color: #fff;
+  -webkit-box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+}
+
+.gray {
+  background: silver;
+  color: #000;
+  -webkit-box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 0 0 3px silver, 1em 1em 3px 0 rgb(0 0 0 / 50%);
+}
+
+.text_center{
+  text-align: center;
+}
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+}
+
+nav {
+  display: block;
+  margin:0;
+}
+
+.top_guy {
+  color: white;
+  font-size: 48px;
+  display:inline;
+  font-family: 'Times New Roman';
+  padding: 20;
+}
+
+.top_top {
+  margin: 5;
+}
+
+.logo {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.right {
+  display:inline;
+}
