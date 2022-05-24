@@ -33,6 +33,7 @@ body {
   text-align: center;
   font-family: 'Courier Prime', monospace;
   vertical-align: middle;
+  justify-content: center;
 }
 
 .curve {
@@ -44,6 +45,7 @@ body {
   border-color: #fff;
   padding: 1em;
   max-width: 640px;
+  font-family: 'Courier Prime', monospace;
 }
 
 .blue {
@@ -102,5 +104,6 @@ nav {
 }
 
 .right {
-  display:inline;
+  display:flex;
+  gap:20px;
 }
