@@ -1,120 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>cool corners</title>
-    <!-- Icon -->
-    <link
-      rel="icon"
-      href="https://easy-data.mdbgo.io/img/favicon/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-    />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
-    <!-- MDB UI KIT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" />
-    <!-- Custom styles -->
-    <style></style>
-  </head>
 
-  <body>
-    <div class="top-menu-bar">
-        <header>
-            <nav>
-                <ul>
-                    <a href="index.html">about</a>
-                    <a href="projects.html">projects</a>
-                    <img class="top_top" src="files/gLogo.gif" height="18" />
-                    <a href="music.html">favorites</a>
-                    <!--  explore page to include cool corners of the internet -->
-                    <a href="about.html">contact</a>
-                    <a href="coolCorners.html">coolCorners</a>
-                </ul>
-            </nav>
-            <hr>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>cool corners</title>
+  <!-- Icon -->
+  <link rel="icon" href="https://easy-data.mdbgo.io/img/favicon/favicon-32x32.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB UI KIT -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" />
+  <!-- Custom styles -->
+  <style></style>
+</head>
+
+<body>
+  <div style="top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: silver;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Courier Prime', monospace;">
+    <header>
+      <nav>
+        <ul>
+          <a href="index.html">about</a>
+          <a href="projects.html">projects</a>
+          <img class="top_top" src="files/gLogo.gif" height="18" />
+          <a href="music.html">favorites</a>
+          <!--  explore page to include cool corners of the internet
+                  <a href="filter.html">filter</a>
+                       -->
+          <a href="about.html">contact</a>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+  </div>
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+      <!-- Table -->
+      <table class="table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <!-- Table -->
     </div>
-    
-    <!--Main layout-->
-    <main>
-      <div class="container">
-        <!-- Table -->
-        <table class="table">
-          <thead id="table-head"></thead>
-          <tbody id="table-body"></tbody>
-        </table>
-        <!-- Table -->
-      </div>
-    </main>
-    <!--Main layout-->
+  </main>
+  <!--Main layout-->
 
-    <!--Footer-->
-    <footer></footer>
-    <!--Footer-->
-  </body>
+  <!--Footer-->
+  <footer></footer>
+  <!--Footer-->
+</body>
 
-  <!-- MDB ESSENTIAL -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
-  <!-- Google API -->
-  <script src="https://apis.google.com/js/api.js"></script>
-  <!-- easyData -->
-  <script type="text/javascript" src="js/sheets.js"></script>
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
+<!-- Google API -->
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- easyData -->
+<script type="text/javascript" src="js/sheets.js"></script>
 
-  <!-- easyData - Creating table -->
-  <script>
+<!-- easyData - Creating table -->
+<script>
+  {
     {
-      {
-        // Your API KEY
-        const API_KEY = "AIzaSyAlE9WKACLWMxdWE_lnaXu05JaTcl3iGt0";
+      // Your API KEY
+      const API_KEY = "AIzaSyAlE9WKACLWMxdWE_lnaXu05JaTcl3iGt0";
 
-        function displayResult2(response) {
-          let tableHead = "";
-          let tableBody = "";
+      function displayResult2(response) {
+        let tableHead = "";
+        let tableBody = "";
 
-          response.result.values.forEach((row, index) => {
-            if (index === 0) {
-              tableHead += "<tr>";
-              row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
-              tableHead += "</tr>";
-            } else {
-              tableBody += "<tr>";
-              row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
-              tableBody += "</tr>";
-            }
-          });
-
-          document.getElementById("table-head").innerHTML = tableHead;
-          document.getElementById("table-body").innerHTML = tableBody;
-        }
-
-        function loadData() {
-          // Spreadsheet ID
-          const spreadsheetId = "1LtnUaBAilnsr5rFXv4bCSugK2c05BUJZOJ-1KK-cRl4";
-          const range = "A:Z";
-          getPublicValues({ spreadsheetId, range }, displayResult2);
-        }
-
-        window.addEventListener("load", (e) => {
-          initOAuthClient({ apiKey: API_KEY });
+        response.result.values.forEach((row, index) => {
+          if (index === 0) {
+            tableHead += "<tr>";
+            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+            tableHead += "</tr>";
+          } else {
+            tableBody += "<tr>";
+            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+            tableBody += "</tr>";
+          }
         });
 
-        document.addEventListener("gapi-loaded", (e) => {
-          loadData();
-        });
+        document.getElementById("table-head").innerHTML = tableHead;
+        document.getElementById("table-body").innerHTML = tableBody;
       }
+
+      function loadData() {
+        // Spreadsheet ID
+        const spreadsheetId = "1LtnUaBAilnsr5rFXv4bCSugK2c05BUJZOJ-1KK-cRl4";
+        const range = "A:Z";
+        getPublicValues({ spreadsheetId, range }, displayResult2);
+      }
+
+      window.addEventListener("load", (e) => {
+        initOAuthClient({ apiKey: API_KEY });
+      });
+
+      document.addEventListener("gapi-loaded", (e) => {
+        loadData();
+      });
     }
-  </script>
+  }
+</script>
+
 </html>
