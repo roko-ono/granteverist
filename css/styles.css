@@ -113,3 +113,23 @@ nav {
 .right_float{
   text-align:right;
 }
+
+.gallery {
+  position:relative;
+  max-width: 640px;
+  column-count: 4;
+  padding: 20px;
+  background:white;
+}
+
+.designs {
+  margin: 10px;
+  overflow: auto;
+  float:left;
+  width: 175px;
+}
+
+.designs img{
+  width:100%;
+  height:auto;
+}
