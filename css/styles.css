@@ -98,6 +98,10 @@ nav {
   margin: 5;
 }
 
+.pg_margins {
+  margin-top: 0;
+}
+
 .logo {
   text-align: center;
   vertical-align: middle;
@@ -106,4 +110,8 @@ nav {
 .right {
   display:flex;
   gap:20px;
+}
+
+.right_float{
+  text-align:right;
 }
