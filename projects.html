@@ -198,43 +198,135 @@
             </div>
             <p>I've worked in Graphic Design for myself and friends since
                 2018. Here are a few examples of my work:</p>
-            <div>
+            <div class="row">
                 <div class="designs">
-                    <img src="files/SonderLogo.png" />
+                    <img src="files/SonderLogo.png" onclick="openModal();currentSlide(1)" class="hover-shadow"/>
                 </div>
                 <div class="designs">
-                    <img src="files/repurposeBadges.png" />
+                    <img src="files/repurposeBadges.png" onclick="openModal();currentSlide(2)" class="hover-shadow"/>
                 </div>
                 <div class="designs">
-                    <img src="files/LAcouriersZoomo.png" />
+                    <img src="files/LAcouriersZoomo.png"  onclick="openModal();currentSlide(3)" class="hover-shadow"/>
                 </div>
                 <div class="designs">
-                    <img src="files/habibDonut.png" />
+                    <img src="files/habibDonut.png" onclick="openModal();currentSlide(4)" class="hover-shadow"/>
                 </div>
                 <div class="designs">
-                    <img src="files/newClear.png" />
+                    <img src="files/newClear.png" onclick="openModal();currentSlide(5)" class="hover-shadow"/>
                 </div>
                 <div class="designs">
-                    <img src="files/zoomoLicense.png" />
+                    <img src="files/zoomoLicense.png" onclick="openModal();currentSlide(6)" class="hover-shadow"/>
                 </div>
-                <div class="designs">
+                <!-- <div class="designs"> 
                     <img src="files/ubereastZoomo.png" />
-                </div>
+                </div>-->
                 
                 <div class="designs">
-                    <img src="files/bananawhite2.png" />
+                    <img src="files/bananawhite2.png" onclick="openModal();currentSlide(7)" class="hover-shadow"/>
                 </div>
-                <div class="designs">
+                <!-- <div class="designs">
                     <img src="files/bananayellow.png" />
-                </div>
+                </div>-->
 
-                <div class="designs">
+                <!-- <div class="designs">
                     <img src="files/lockurBike.png" />
-                </div>
+                </div>-->
             </div>
+              
+              <!-- The Modal/Lightbox -->
+              <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+              
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="files/SonderLogo.png" style="width:70%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="files/repurposeBadges.png" style="width:70%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="files/LAcouriersZoomo.png" style="width:50%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="files/habibDonut.png" style="width:30%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="files/newClear.png" style="width:70%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="files/zoomoLicense.png" style="width:30%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="files/bananawhite2.png" style="width:50%">
+                  </div>
+              
+                  <!-- Next/previous controls -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+              
+                  
+                </div>
+              </div>
         </fieldset>
 
     </div>
+
+    <script>
+        // Open the Modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
 </body>
 
 </html>
