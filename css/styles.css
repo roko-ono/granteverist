@@ -136,7 +136,7 @@ nav {
   float: left;
 }
 
-
+/* https://www.youtube.com/watch?v=073XKB9xv-M */
 
 .row>.column {
   padding: 0 8px;
@@ -196,12 +196,10 @@ nav {
   cursor: pointer;
 }
 
-/* Hide the slides by default */
+/* Hide the slides by default 
+https://www.w3schools.com/howto/howto_js_lightbox.asp */
 .mySlides {
-  display: flex;
-  align-items: center;
-
-  justify-content: center;
+  display: none;
 }
 
 /* Next & previous buttons */
