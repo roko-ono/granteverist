@@ -1,0 +1,20 @@
+name: Deploy to Pinata
+on:
+  push:
+    branches:
+      - main   # or 'master' if that's your branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Pinata CLI
+        run: npm install -g @pinata/sdk
+
+      - name: Upload to Pinata
+        run: |
+          pinata upload ./ \
+            --jwt ${{ secrets.PINATA_JWT }}
