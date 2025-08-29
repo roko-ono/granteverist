@@ -7,6 +7,8 @@
     <title>projects</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="files/logoStatic.svg">
+    <script src="js/scripts.js"></script>
+    <script data-goatcounter="https://nnnectarines.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
 
@@ -15,8 +17,8 @@
         <header>
             <nav>
                 <ul>
-                    <a href="about.html">about</a>
                     <a href="projects.html">projects</a>
+                    <a href="about.html">about</a>
                     <a href="about.html"><img class="top_top" src="files/gLogo.gif" height="18" /></a>
                     <a href="favorites.html">favorites</a>
                     <!--  explore page to include cool corners of the internet
@@ -38,441 +40,335 @@
     </div>
 
     <div class="curve blue">
-        <p><em>A collection of projects relating to data science, economics, nature, technology,
-                and design. My most recent writing and projects are collected <a
-                    href="https://jade-vanilla-c9f.notion.site/Open-Pages-10557d4d821180098c7ceedf738a1cf9"
-                    target="_blank">here</a>.
+        <p><em>Current and archived projects exploring decentralization, nature, and technology.
                 <br>
-                <br>
-                Below are past projects:
             </em></p>
     </div>
 
 
     <div class="curve gray">
         <fieldset>
-            <legend class="text_center">Data Science</legend>
+            <legend class="text_center">Current</legend>
             <div>
                 <h3>
-                    Trends in NC-11's Donor History
+                    Writing & Research
                 </h3>
-            </div>
-            <div class="right">
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content1', 'arrow1')">
+                        <h5>/ Insights on decentralization</h5>
+                        <div class="spacer"></div>
+                        <div class="image-container">
+                            <img src="files/substack_banner.png" />
+                        </div>
+                        <span class="arrow" id="arrow1">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content1">
+                        <div class="right">
+                            <p class="pg_margins"> Thoughts on <a href="https://nectarineso.substack.com/"
+                                    target="_blank">crypto infra, DeFi, and AI</a>
+                            </p>
+                            <img src="files/nectarines_site.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content2', 'arrow2')">
+                        <h5>/ Stablecoins report for M0</h5>
+                        <div class="spacer"></div>
+                        <img src="files/future_stables_banner.png" />
+                        <span class="arrow" id="arrow2">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content2">
+                        <div class="right">
+                            <p class="pg_margins"> A comprehensive report on <a
+                                    href="https://x.com/m0/status/1925537268724359281" target="_blank">the state of
+                                    Stablecoins</a> for M0
+                            </p>
+                            <img src="files/future_of_stables.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content3', 'arrow3')">
+                        <h5>/ Contributions to The Big Whale</h5>
+                        <div class="spacer"></div>
+                        <img src="files/TBW_banner.png" />
+                        <span class="arrow" id="arrow3">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content3">
+                        <div class="right">
+                            <p class="pg_margins"> Contributor to <a
+                                    href="https://app.thebigwhale.io/people/grant-everist" target="_blank">The Big
+                                    Whale</a>, an institutionally-focused crypto media outlet
+                            </p>
+                            <img src="files/TBW_big.png" />
+                        </div>
+                    </div>
+                </div>
 
-                <p class="pg_margins"> Although campaign finance is public information, it can be difficult to
-                    understand or analyze. In <a
-                        href="https://drive.google.com/drive/folders/1ziUrvxp9TzwpJ-KxYgMCW9ut7-c6vsbt?usp=sharing"
-                        target="_blank">this guide</a>, we take a look at how to transform an unwieldy 500,000+ row
-                    dataset into workable tables with interesting and actionable insights.
-                </p>
-                <img src="files/nc11.png" width="50%" />
-            </div>
-            <br>
-            <div>
-                <h3 class="right_float">
-                    Market Frictions and Curiosities
-                </h3>
-            </div>
-            <div class="right">
-                <img src="files/predictit_8_26.png" width=50% />
-                <p class="pg_margins">
-                    Interested in prediction markets, politics, or market design? In <a
-                        href="https://drive.google.com/drive/folders/14P0ME-rstKw7u9kBVlow884KoH8sdMm6?usp=sharing"
-                        target="_blank">this guide</a>, we explore calculating expected returns for various
-                    positions in a 2022 congressional election prediction market.
-                </p>
-            </div>
-            <br>
-            <div>
-                <h3>
-                    Analyzing trends in bike theft
-                </h3>
-            </div>
-            <div class="right">
 
-                <p class="pg_margins"> While working for a micromobility startup in San Francisco, I analyzed <a
-                        href="https://data.sfgov.org/Public-Safety/Bicycle-Thefts-Previous-Three-Months/amey-ayxi"
-                        target="_blank">open-source
-                        data</a>
-                    from the SFPD and internal theft data in R to identify high-risk theft
-                    scenarios which informed solutions for protecting customers and inventory.
-                    <br><br>
-                    This analysis helped bring our theft rates down by over 70%,
-                    guiding the recovery of over $20,000 in hardware and unpaid arrears.
-                </p>
-                <img src="files/sfBikeTheftHeatMap.png" width="50%" />
-            </div>
-            <!--
-            <br>
-            <div>
-                <h3 class="right_float">
-                    Clustering, statistical simulation, and NLP
-                </h3>
-            </div>
-            <div class="right">
-                <img src="files/project2heatmap.png" width=50% />
-                <p class="pg_margins">
-                    I used ML to help a local cafe explore purchase history and uncover trends
-                    that could be used to improve pricing and bundling, and I scraped and cleaned
-                    customer reviews for an emerging hotel chain, performing clustering and sentiment
-                    analysis to reveal trends that illuminated aspects of the customer experience
-                    where the hotel was falling short.
-                </p>
             </div>
             <br>
-            <div>
-                <h3>
-                    Analyzing Decentralized Exchange Pools with SQL
-                </h3>
-            </div>
-            <p>
-                I'm interested in potential of decentralization to improve our economic
-                and governance structures, and I've done a bit of data exploration in the space.
-            </p>
-            <div class="right">
-                <p class="pg_margins">
-                    Decentralized exchanges (DEXs) are peer-to-peer marketplaces where
-                    cryptocurrency traders can make trades without any intermediary. These transactions are
-                    facilitated by self-executing agreements written in code called smart contracts.
-                    <br><br>
-                    DEXs need liquidity to offer accurate market prices on trades, and they attract this liquidity
-                    by offering a variety of incentives.
-                </p>
-
-                <img src="files/duneSC.png" width="50%" />
-            </div>
-            <p>
-                I used SQL to analyze a handful of the top
-                DEXs and made a
-                <a href="https://dune.com/grant/DEX-Comparison" target="_blank">comparison on Dune Analytics</a> of
-                their popularity. I used Google Sheets to create a <a
-                    href="https://docs.google.com/spreadsheets/d/1YGCH1XHEbrYD0BdPRif5rhnpzH1J4K2S-mUyurrvHr4/edit?usp=sharing"
-                    target="_blank">perpetual futures swap profit calculator</a>, and
-                more of my decentralized data analysis work can be found <a href="https://dune.com/grant/DEX-Comparison"
-                    target="_blank">here</a>.
-            </p>
--->
         </fieldset>
-
     </div>
+
 
     <div class="curve gray">
         <fieldset>
-            <legend class="text_center">Product Dev & Management</legend>
+            <legend class="text_center">Archived</legend>
             <div>
-                <h3>
-                    UNC Hydroponics Lab
-                </h3>
-            </div>
-            <div class="right">
-
-                <p class="pg_margins">
-                    A lifelong interest in cultivation has led me in recent years to hydroponics,
-                    the practice of growing plants in water.
-                    <br> <br>
-                    In 2022, with funding from UNC's Renewable Energy Special Project Committee, I led a
-                    team to design and build a fully sustainable solar and hydrogen fuel cell-powered
-                    hydroponics lab.
-                    <br> <br>
-                    The project has been featured in a few stories, including <a
-                        href="files/ELLA FEATHERS hydrogen energy explainer.pdf" target="_blank">these</a>
-                    <a href="https://youtu.be/Ik_Ldpfs0ZA" target="_blank">two</a>.
-                    <br> <br>
-                    I also wrote a piece
-                    <a href="files/hydroponics_review.pdf" target="_blank">exploring the current landscape of
-                        vertical farming and the philosophical implications of its success</a>.
-
-                </p>
-
-                <img src="files/hydropon_updated.jpeg" width="45%" />
-
-            </div>
-            <br>
-            <div>
-                <h3 class="right_float">
-                    SAEP Website
-                </h3>
-            </div>
-            <div class="right">
-                <div>
-                    <a href="https://web.archive.org/web/20181130110359/http://www.saep.org/" target="_blank">
-                        <img src="files/saep_old.png" width="80%" />
-                    </a>
-                    <br>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp; &#x2B07;&#xFE0F; &emsp;&emsp;&emsp; &#x2B07;&#xFE0F;
-                        &emsp;&emsp;&emsp; &#x2B07;&#xFE0F;
-                    </p>
-                    <a href="https://www.saep.org/" target="_blank">
-                        <img src="files/saep_site.png" width="80%" />
-                    </a>
+                <h3>Data Science</h3>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content101', 'arrow101')">
+                        <h5>/ [2022] Political Donation Analysis</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow101">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content101">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Campaign finance data is public, but helpful
+                                insights are buried in an ancient database.
+                                <br>
+                                <br>
+                                <a href="https://drive.google.com/drive/folders/1ziUrvxp9TzwpJ-KxYgMCW9ut7-c6vsbt"
+                                    target="_blank">This guide</a> shows resource-strapped campaigns
+                                how to efficiently transform an unwieldy 500,000+ row
+                                dataset into workable tables with actionable insights.
+                            </p>
+                            <img src="files/nc11.png" />
+                        </div>
+                    </div>
                 </div>
-                <p class="pg_margins">
-                    I fully rebuilt two of the South African Education Project's
-                    websites.
-                    <br> <br>
-                    From start to finish, I got to know site users, explored existing
-                    issues through focus groups, developed personas and user
-                    journeys, designed mock-ups and wireframes, and ultimately launched
-                    the <a href="https://www.saep.org/" target="_blank">new site</a>!
 
-                </p>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content102', 'arrow102')">
+                        <h5>/ [2022] Prediction Market Frictions</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow102">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content102">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Prediction markets often offer
+                                arbitrageable inefficiencies.
+                                <br>
+                                <br>
+                                <a href="https://drive.google.com/drive/folders/14P0ME-rstKw7u9kBVlow884KoH8sdMm6?usp=sharing"
+                                    target="_blank">This guide</a> explores calculating expected returns for various
+                                positions in a 2022 congressional election prediction market.
+                            </p>
+                            <img src="files/predictit_8_26.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content104', 'arrow104')">
+                        <h5>/ [2022] Reviews of a Chapel Hill Hotel</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow104">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content104">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Public reviews help guide consumer choices, but how can businesses use
+                                this feedback to improve?
+                                <br>
+                                <br>
+                                For an ML class in college, my team and I performed sentiment
+                                analysis on customer reviews of a local hotel,
+                                illuminating aspects of the customer experience
+                                where the hotel was falling short.
+                            </p>
+                            <img src="files/hotel_analysis.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content105', 'arrow105')">
+                        <h5>/ [2022] DeFi Analysis</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow105">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content105">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Decentralized exchanges (DEXs) allow people to permissionlessly swap
+                                crypto.
+                                <br>
+                                <br>
+                                Perpetual futures (perps) are derivatives that let traders speculate on the price of an
+                                asset without ever expiring.
+                                <br>
+                                <br>
+                                I made a simple <a
+                                    href="https://docs.google.com/spreadsheets/d/1YGCH1XHEbrYD0BdPRif5rhnpzH1J4K2S-mUyurrvHr4/edit?usp=sharing"
+                                    target="_blank">perps profit calculator</a>, and
+                                more of my decentralized data analysis work can be found <a
+                                    href="https://dune.com/grant/DEX-Comparison" target="_blank">on Dune</a>.
+                            </p>
+
+                            <img src="files/duneSC.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content103', 'arrow103')">
+                        <h5>/ [2020] Trends in SF Bike Theft</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow103">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content103">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Anyone who's spent time in SF is often all too
+                                familiar with theft.
+                                <br>
+                                <br>
+                                While working for a micromobility startup in San Francisco, I
+                                analyzed <a
+                                    href="https://data.sfgov.org/Public-Safety/Bicycle-Thefts-Previous-Three-Months/amey-ayxi"
+                                    target="_blank">open-source
+                                    data</a>
+                                from the SFPD and internal theft data in R to identify high-risk theft
+                                scenarios which informed solutions for protecting customers and inventory.
+                                <br><br>
+                                This analysis helped bring our theft rates down by over 70% and
+                                guided the recovery of over $20,000 in hardware and arrears.
+                            </p>
+                            <img src="files/sfBikeTheftHeatMap.png" />
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h3>Design & PM</h3>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content106', 'arrow106')">
+                        <h5>/ [2022] Hydroponics Lab</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow106">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content106">
+                        <div class="right">
+
+                            <p class="pg_margins">
+                                Hydroponics enables faster growth, higher yields, and year-round
+                                cultivation with less water and space.
+                                <br> <br>
+                                After winning a grant from UNC's Renewable Energy Special Project Committee, I led a
+                                team to design and build a fully sustainable solar and hydrogen fuel cell-powered
+                                hydroponics lab.<a href="files/ELLA FEATHERS hydrogen energy explainer.pdf"
+                                    target="_blank">[1]</a>
+                                <a href="https://youtu.be/Ik_Ldpfs0ZA" target="_blank">[2]</a>
+                                <br> <br>
+                                I wrote
+                                <a href="files/hydroponics_review.pdf" target="_blank">a review</a> exploring the
+                                current landscape
+                                of
+                                vertical farming and the philosophical implications of its success.
+
+                            </p>
+
+                            <img src="files/hydropon_updated.jpeg" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content107', 'arrow107')">
+                        <h5>/ [2019] SAEP Website</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow107">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content107">
+                        <div class="right">
+                            <div>
+                                <a href="https://web.archive.org/web/20181130110359/http://www.saep.org/"
+                                    target="_blank">
+                                    <img src="files/saep_old.png" />
+                                </a>
+                                <br>
+                                <p>&emsp;&emsp;&emsp;&emsp;&emsp; &#x2B07;&#xFE0F; &emsp;&emsp;&emsp; &#x2B07;&#xFE0F;
+                                    &emsp;&emsp;&emsp; &#x2B07;&#xFE0F;
+                                </p>
+                                <a href="https://www.saep.org/" target="_blank">
+                                    <img src="files/saep_site.png" />
+                                </a>
+                            </div>
+                            <p class="pg_margins">
+                                I fully rebuilt two of the South African Education Project's
+                                websites.
+                                <br>
+                                <br>
+                                From start to finish, I got to know site users, explored existing
+                                issues through focus groups, developed personas and user
+                                journeys, designed mock-ups and wireframes, and ultimately launched
+                                the <a href="https://www.saep.org/" target="_blank">new site</a>!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle-header" onclick="toggleContent('content108', 'arrow108')">
+                        <h5>/ [2018] Passive Refrigeration</h5>
+                        <div class="spacer"></div>
+                        <span class="arrow" id="arrow108">▼</span>
+                    </div>
+                    <div class="toggle-content" id="content108">
+                        <div class="right">
+                            <p class="pg_margins">
+                                Cold chain inefficiencies around the globe cause up
+                                to 40% of food to spoil before it reaches a plate.
+                                <br>
+                                <br>
+                                At UNC I cofounded Veera, a cold storage solution with enhanced
+                                evaporative cooling.
+                                <br><br>
+                                Working with smallholder farmers and distributors in Bihar and Kathmandu,
+                                Nepal, we designed a cold storage unit using solar power to extend the shelf 
+                                life of produce, dynamically reacting to optimize cooling for any given temperature and humidity. 
+                                My cofounder, Varun, has written 
+                                <a href="https://www.varunjainventures.com/copy-of-veera-1" target="_blank">more about the startup</a>.
+                            </p>
+                            <img src="files/veera.jpeg" />
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <br>
             </div>
-            <br>
-            <div>
-                <h3>
-                    Veera: Addressing food waste
-                </h3>
-            </div>
-            <div class="right">
-
-                <p class="pg_margins">In 2018, I cofounded Veera, a cold food storage solution that enhances the power
-                    of evaporative cooling by controlling environmental conditions outside the unit.
-                    <br><br>
-                    We designed a cold storage device that uses solar power to extend the shelf life of
-                    produce, dynamically reacting to optimize cooling given the heat and humidity.
-                </p>
-                <img src="files/veera.jpeg" width="50%" />
-
-            </div>
-
-            <p>
-                We conducted customer discovery interviews with over 100 small-holder farmers, distributors
-                and families in rural Bihar, India and Kathmandu, Nepal. We raised over $10,000 through
-                bootstrapping efforts and received an initial 1000 unit commitment from the Bihar government.
-                My cofounder, Varun, has written more about our work
-                <a href="https://www.varunjainventures.com/copy-of-veera-1" target="_blank">here</a>.
-            </p>
 
 
         </fieldset>
 
     </div>
 
-    <div class="curve gray">
-        <fieldset>
-            <legend class="text_center">Research</legend>
-            <div>
-                <h3>
-                    Rural Economics from Appalachia to the Balkans
-                </h3>
-            </div>
-            <div class="right">
-                <p class="pg_margins">In 2021, Jay Sheth and I set out to research the economic impact of localized
-                    crafts for rural communities in the Balkans. Together with communities and
-                    officials throughout Germany, Slovenia, Croatia, and Greece, we developed a
-                    report and business plan for small businesses and rural communities of Appalachia.
-                </p>
-                <img src="files/slovenia.JPG" width="50%" />
-
-            </div>
-
-            <p>
-                <a href="contact.html">Reach out</a> if you're interested in the report!
 
 
-
-            </p>
-        </fieldset>
-
-    </div>
-
-    <div class="curve gray">
-        <fieldset>
-            <legend class="text_center">Graphic Design</legend>
-
-            <!-- <div> 
-                <h3>
-                    Biomimicry
-                </h3>
-            </div>
-            <p>While at UNC, I designed a course on Biomimicry: The Art and Science of Nature</p>
-
-            <div>
-                <h3 class="right_float">
-                    Graphic Design
-                </h3>
-            </div>
-            <div>
-                <h3>
-                    Graphic Design
-                </h3>
-            </div>
-            <p>I enjoy drawing and graphic design and have made several stickers for
-                work and friends over the years. A few examples are included here
-                (click to enlarge!):</p> -->
-            <div class="row">
-                <div class="designs">
-                    <img src="files/sonder.png" onclick="openModal();currentSlide(1)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/codin.png" onclick="openModal();currentSlide(2)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/morte.png" onclick="openModal();currentSlide(3)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/lacou.png" onclick="openModal();currentSlide(4)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/habib.png" onclick="openModal();currentSlide(5)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/range.png" onclick="openModal();currentSlide(6)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/plate.png" onclick="openModal();currentSlide(7)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/badge.png" onclick="openModal();currentSlide(8)" class="hover-shadow" />
-                </div>
-                <div class="designs">
-                    <img src="files/new_clear.png" onclick="openModal();currentSlide(9)" class="hover-shadow" />
-                </div>
-
-
-
-                <!-- <div class="designs"> 
-                    <img src="files/ubereastZoomo.png" />
-                </div>-->
-
-
-
-                <!-- <div class="designs">
-                    <img src="files/bananayellow.png" />
-                </div>-->
-
-                <!-- <div class="designs">
-                    <img src="files/lockurBike.png" />
-                </div>-->
-            </div>
-
-            <!-- The Modal/Lightbox -->
-            <div id="myModal" class="modal">
-                <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="modal-content">
-
-                    <div class="mySlides">
-                        <div class="numbertext">1 / 9</div>
-                        <img src="files/sonder.png" style="width:70%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 9</div>
-                        <img src="files/codin.png" style="width:70%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">3 / 9</div>
-                        <img src="files/morte.png" style="width:70%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 9</div>
-                        <img src="files/lacou.png" style="width:70%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">5 / 9</div>
-                        <img src="files/habib.png" style="width:50%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">6 / 9</div>
-                        <img src="files/range.png" style="width:40%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">7 / 9</div>
-                        <img src="files/plate.png" style="width:50%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">8 / 9</div>
-                        <img src="files/badge.png" style="width:50%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">9 / 9</div>
-                        <img src="files/new_clear.png" style="width:50%">
-                    </div>
-
-                    <!-- Next/previous controls -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-
-                </div>
-            </div>
-        </fieldset>
-
-    </div>
 
     <div class="curve gray">
         <fieldset>
             <legend class="text_center">This Website</legend>
             <p>
-                I began building this website in May, 2022. The code can be found <a
-                    href="https://github.com/roko-ono/granteverist">
-                    on my github</a>. Special thanks to <a href="http://hussman.unc.edu/directory/adjunct/scott-geier">
-                    Scott Geier</a> for introducing me to UX and web design, <a href="https://www.saep.org/">SAEP</a>
-                for giving me the chance to practice it,
-                <!-- <a
-                    href="https://www.kenan-flagler.unc.edu/faculty/directory/daniel-ringel/">
-                    Daniel Ringel</a> for mentoring me in the art of data science,--> the University of YouTube for
-                filling in the gaps, and <a href="https://curve.fi/">Curve Finance</a> <!-- , (whose <a
-                    href="https://en.wikipedia.org/wiki/Klein_bottle">logo</a>
-                I find thought-provoking)
-                <a href="https://www.youtube.com/watch?v=iGO12Z5Lw8s">dimensional constraints</a> --> for
+                Special thanks to CJ for introducing me to UX and web design, <a
+                    href="https://www.saep.org/">SAEP</a>
+                for giving me the chance to practice,
+                the University of YouTube for
+                filling in the gaps, and <a href="https://curve.fi/">Curve Finance</a> for
                 inspiring
-                the design and colorway of this site.
+                the design and colorway of <a href="https://github.com/roko-ono/granteverist">
+                    this site</a>.
             </p>
         </fieldset>
 
     </div>
-
-    <script>
-        // Open the Modal
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        // Close the Modal
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
-    </script>
 </body>
 
 </html>

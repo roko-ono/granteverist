@@ -23,6 +23,98 @@ body {
   padding: 0px;
 }
 
+.toggle-header {
+  cursor: pointer;
+  padding: 0px 5px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  max-width: 100%; 
+  box-sizing: border-box; 
+}
+
+.image-container {
+  height: 100%;
+  overflow: hidden;  /* Move overflow hidden here instead */
+  min-width: 0;
+}
+
+.toggle-header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left center;
+  margin-right: 0px;
+  max-width: 200px;
+  min-width: 0;
+}
+
+.toggle-container {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.toggle-header h5 {
+  margin: 5px 2px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.toggle-header:hover {
+  background: #e0e0e0;
+}
+
+.arrow {
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.spacer {
+  flex-grow: 1;   /* For items with no image */
+}
+
+.toggle-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+  border-top: none;
+}
+
+.toggle-content.open {
+  display: block;
+}
+
+.toggle-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left center;
+  margin-right: 0px;
+  max-width: 200px;
+  min-width: 0;
+}
+
+.right img {
+  flex-shrink: 0;
+  width: 200px; /* Or whatever size you want */
+}
+
+
 .top-menu-bar {
   top: 0;
   left: 0;
@@ -44,6 +136,8 @@ body {
   padding: 1em;
   max-width: 640px;
   font-family: 'Courier Prime', monospace;
+  overflow: hidden;  /* Add this */
+
 }
 
 .blue {
@@ -77,11 +171,30 @@ fieldset {
   border-style: groove;
   border-color: threedface;
   border-image: initial;
+  max-width: 100%;
 }
 
 nav {
   display: block;
   margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  border: none;
+}
+
+.social-links img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .top_guy {
@@ -240,6 +353,7 @@ https://www.w3schools.com/howto/howto_js_lightbox.asp */
   position: absolute;
   top: 0;
 }
+
 
 /* Caption text */
 .caption-container {
